@@ -1,0 +1,111 @@
+html,
+body 
+	height: 100%
+	color: $Mikado
+
+.wrapper 
+	display: flex
+	flex-direction: column
+	min-height: 100%
+
+.main 
+	flex: 1 0 auto
+
+.footer 
+	flex: 0 0 auto
+
+.container
+  max-width: 1100px
+  margin: 0 auto
+  padding: 0 15px
+
+h1
+	font-size: 42px
+	text-transform: uppercase
+	font-family: "JostBold"
+	text-align: center
+
+h2
+	font-size: 36px
+	font-family: "JostBold"
+	text-align: center
+
+h3
+	font-size: 32px
+	font-family: "JostSemiBold"
+	text-align: center
+
+h4
+	font-size: 28px
+	font-family: "JostSemiBold"
+	text-align: center
+
+h5
+	font-size: 24px
+	font-family: "JostSemiBold"
+	text-align: center
+
+p
+	font-size: 17px
+	font-family: "PoppinsRegular"
+
+.titleUnderline
+	position: relative
+	text-align: left
+	&::after
+		content: ''
+		position: absolute
+		bottom: -4px
+		width: 100px
+		height: 5px
+		background: $Buttercup
+		left: 0
+
+.btnPrimary
+	font-size: 20px
+	font-family: "JostMedium"
+	padding: 12px 20px
+	background: $Buttercup
+	border-radius: 4px
+	width: max-content
+	color: $White
+	&:hover
+		border: 1px solid $Buttercup
+		box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16)
+	&:active
+		background: #F0AC09
+
+.btnGhost
+	font-size: 20px
+	font-family: "JostMedium"
+	padding: 12px 24px
+	background: $White
+	border-radius: 4px
+	border: 1px solid $Mikado
+	width: max-content
+	color: $White
+	color: $Mikado
+	&:hover
+		background: $Mikado
+		box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16)
+	&:active
+		border: 1px solid rgba(55, 45, 43, 0.7)
+
+.btnSecondary
+	font-size: 20px
+	font-family: "JostMedium"
+	padding: 12px 20px
+	background: $Buttercup
+	border-radius: 4px
+	width: max-content
+	color: $White
+	display: flex
+	&:hover
+		border: 1px solid $Buttercup
+		box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16)
+	&:active
+		background: #F0AC09
+
+
+
+
