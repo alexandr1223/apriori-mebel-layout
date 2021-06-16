@@ -1,0 +1,109 @@
+@media (max-width: 991px) 
+    .portfolio
+        padding-bottom: 75px
+        &__info
+            margin-bottom: 60px
+        &__wrapper
+            display: flex
+            flex-direction: column
+        &__selector
+            display: flex
+            flex-direction: row
+            width: max-content
+            &::after
+                top: auto
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 4px
+            a
+                white-space: nowrap
+                &:not(:last-child)
+                    margin-bottom: 0
+                    margin-left: 0
+                &::after
+                    bottom: 0
+                    left: 0
+                    width: 100%
+                    height: 4px
+            [class*="-tab-"]
+                margin-left: 20px
+                padding-left: 0
+        &__images
+            margin-top: 30px
+@media (max-width: 767px)
+    .portfolio
+        padding-top: 54px
+        width: 100%
+        &__selector
+            overflow: scroll
+        &__text
+            font-size: 17px
+            line-height: 24px
+    
+    .catalog
+        padding-top: 54px
+        padding-bottom: 75px
+        &__block
+            display: flex
+            flex-direction: column
+            &--revers
+                flex-direction: column-reverse
+        &__itemTitle
+            margin-top: 16px
+            margin-bottom: 8px
+            font-size: 17px
+            line-height: 24px
+        &__text
+            font-size: 14px
+            line-height: 21px
+            margin-bottom: 24px
+        &__btn
+            padding: 12px 24px
+        &__list
+            grid-gap: 24px
+
+    .advantages
+        padding-top: 54px
+        &__title
+            margin-bottom: 28px
+        &__text
+            font-size: 14px
+            line-height: 21px
+        &__list
+            flex-direction: column
+        &__left
+            margin-right: 0
+            width: 100%
+            li
+                white-space: normal
+                font-size: 14px
+                line-height: 21px
+                &:not(:last-child)
+                    margin-bottom: 8px
+                svg
+                    min-width: 16px
+                    max-width: 16px
+                    margin-right: 8
+        &__right
+            li
+                white-space: normal
+                font-size: 14px
+                line-height: 21px
+                &:not(:last-child)
+                    margin-bottom: 8px
+                svg
+                    min-width: 16px
+                    max-width: 16px
+                    margin-right: 8
+        &__more
+            width: 100%
+            margin-top: 24px
+            font-size: 17px 
+            line-height: 24px
+            padding: 12px 17px
+        
+    .slider
+        &__leftHide,
+        &__rightHide
+            display: none

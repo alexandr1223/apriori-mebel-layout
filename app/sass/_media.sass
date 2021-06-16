@@ -1,0 +1,428 @@
+@media (max-width: 1480px)
+    .idea
+        &__right
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            img
+                width: 400px
+                height: auto
+@media (max-width: 1250px) 
+    h1
+        font-size: 36px
+        line-height: 140%
+    h2
+        font-size: 24px
+        line-height: 140%
+    .container
+        max-width: 100%
+        padding: 0 30px
+    .idea
+        &__right
+            display: none
+        &__title
+            width: 300px
+    .our-projects
+        padding-bottom: 100px
+        padding-top: 100px
+        &__block
+            grid-template-columns: 1fr 1fr 1fr
+            grid-gap: 20px
+        &__item
+            width: 290px
+        &__center
+            padding: 50px 20px
+        &__itemTitle
+            font-size: 24px
+            line-height: 140%
+        &__btn
+            font-size: 18px
+    .how-work
+        padding-bottom: 100px
+        &__block
+            grid-gap: 20px
+    .question
+        &__left
+            padding-right: 50px
+        &__right
+            margin-left: 50px
+    .footer
+        &__item
+            &--left
+                margin: 0 20px
+        &__logo
+            width: 110px
+        &__nav
+            grid-template-columns: 1fr 1fr
+            grid-gap: 8px 30px
+@media (max-width: 991px) 
+    .header
+        height: 80px
+        &__nav
+            padding-top: 20px
+        &__phone
+            display: none
+        &__pc
+            display: none
+        &__social
+            display: none
+        &__lang
+            display: none
+        &__active
+            &::after                
+                display: none
+        &__mobile
+            display: flex
+            position: absolute
+            top: 0
+            left: -100%
+            height: 100vh
+            width: 100%
+            background: url('../img/mobile-bg.jpg') center center/cover no-repeat
+            transition: .4s
+            .header__lang
+                display: block
+                position: absolute
+                right: 24px
+                top: 30px
+                line-height: 120%
+            .header__social
+                display: flex
+                position: absolute
+                bottom: 40px
+                left: 40px
+        &__menu
+            display: block
+        &__list
+            flex-direction: column
+            margin-left: 40px
+            margin-top: 100px
+            li
+                a
+                    font-size: 32px
+                    line-height: 41px
+                    font-family: "JostSemiBold"
+        &__close
+            position: absolute
+            left: 30px
+            top: 30px 
+    .our-projects
+        padding-bottom: 100px
+        &__block
+            grid-template-columns: 1fr 1fr 1fr
+            grid-gap: 20px
+        &__item
+            width: 220px
+        &__center
+            padding: 30px 10px
+        &__itemTitle
+            font-size: 16px
+            line-height: 140%
+        &__btn
+            font-size: 13px 
+            width: 100%  
+    .question
+        &__right
+            display: none
+        &__left
+            &::after
+                display: none 
+    .footer
+        &__block
+            display: flex
+            flex-direction: column
+        &__item
+            margin: 0 auto
+            &--left
+                text-align: center
+            &:not(:last-child)
+                margin-bottom: 25px
+            svg
+                width: 140px 
+                height: auto
+        &__smallText
+            width: 171px
+            margin: 0 auto
+        &__rights
+            display: none
+            &--hide
+                display: block
+                width: 100%
+                text-align: center
+                margin-top: 12px
+        &__nav
+            display: flex
+            flex-direction: column
+            a
+                &:not(:last-child)
+                    margin-bottom: 8px
+        &__social
+            align-items: center
+            a
+                display: block
+                svg
+                    width: 24px
+        &__btn
+            margin-bottom: 40px  
+        &__design
+            a
+                color: $Buttercup  
+
+@media (max-width: 767px) 
+    h1
+        font-size: 28px
+        line-height: 36px
+    h2
+        font-size: 20px
+        line-height: 26px
+    p
+        font-size: 12px
+        line-height: 17px
+    .container
+        width: 100%
+        padding: 0 16px
+    .btnPrimary,
+    .btnSecondary
+        font-size: 20px
+        line-height: 26px
+        padding: 12px 20px
+    .btnGhost
+        padding: 12px 24px
+    .titleUnderline
+        &::after
+            bottom: -6px
+            height: 4px
+
+    .header
+        height: 80px
+        &__nav
+            padding-top: 20px
+        &__phone
+            display: none
+        &__pc
+            display: none
+        &__social
+            display: none
+        &__lang
+            display: none
+        &__mobile
+            display: flex
+            position: absolute
+            top: 0
+            left: -100%
+            height: 100vh
+            width: 100%
+            background: url('../img/mobile-bg.jpg') center center/cover no-repeat
+            transition: .4s
+            .header__lang
+                display: block
+                position: absolute
+                right: 24px
+                top: 30px
+                line-height: 120%
+            .header__social
+                display: flex
+                position: absolute
+                bottom: 40px
+                left: 40px
+        &__menu
+            display: block
+        &__list
+            flex-direction: column
+            margin-left: 40px
+            margin-top: 100px
+            li
+                a
+                    font-size: 32px
+                    line-height: 41px
+                    font-family: "JostSemiBold"
+        &__close
+            position: absolute
+            left: 30px
+            top: 30px
+    .first
+        margin-top: 80px
+        height: 287px
+        margin-bottom: 35px
+        &__block
+            padding-top: 45px 
+            svg
+                width: 67px
+                height: 42px
+                margin-bottom: 16px
+        &__subtitle
+            font-size: 12px
+            line-height: 17px
+            margin-bottom: 32px
+    .idea
+        padding-bottom: 75px
+        &__title
+            margin-bottom: 30px
+            max-width: 250px
+        &__right
+            display: none
+        .tabbed-section__selector a
+            font-size: 20px
+        [class*="tabbed-section-"] p
+            font-size: 14px
+            width: 100%
+        .tab-wrapper
+            width: 100%
+        &__left
+            width: 100%
+        &__buttons
+            flex-direction: column
+            margin-top: 20px
+            .btnPrimary
+                margin-right: 0
+                margin-bottom: 16px
+                width: 100%
+                text-align: center
+            .btnGhost
+                width: 100%
+                text-align: center
+    .services
+        padding-bottom: 75px
+        &__title
+            margin-bottom: 30px
+        &__leftHide,
+        &__rightHide
+            display: none
+        &__itemTitle
+            bottom: 30px
+        &__item
+            width: 280px
+            margin: 30px 10px
+        .slick-dots 
+            li 
+                button
+                    &::before
+                        transform: translate(-50%, -45%)
+    .companyNums
+        padding: 48px 0
+        background: url('../img/companyNums-mobile-bg.jpg') center center/cover no-repeat
+        &__title
+            font-family: "JostMedium"
+            margin-bottom: 25px
+        &__block
+            grid-template-columns: 1fr 1fr
+            grid-gap: 0
+            justify-items: center
+        &__third
+            grid-column-start: 1
+            grid-column-end: 4
+            margin-top: 30px
+        &__item
+            svg
+                max-width: 30px
+                height: auto
+        &__number
+            font-size: 20px
+            line-height: 26px
+        &__text
+            font-size: 12px
+            line-height: 18px
+        &__line
+            margin: 4px 0
+    .our-projects
+        padding: 75px 0
+        .container
+            width: 100%
+            padding: 0
+        &__title
+            margin-bottom: 30px
+            margin-left: 15px
+        &__block
+            display: block
+        &__item
+            width: 280px
+            margin: 0 10px
+            img
+                height: 100%
+                object-fit: cover
+        &__center
+            display: none !important
+    .how-work
+        padding-bottom: 75px
+        &__itemTitle
+            font-size: 17px
+            line-height: 24px
+            margin-bottom: 12px
+        &__text
+            margin-bottom: 30px
+            font-size: 14px
+            line-height: 21px
+        &__block
+            grid-template-columns: 1fr
+            grid-gap: 30px 0
+    .question
+        padding-bottom: 75px
+        &__right
+            display: none
+        &__left
+            width: 100%
+            padding-right: 0
+            &::after
+                display: none
+        &__text
+            font-size: 16px
+            width: 100%
+            margin-bottom: 30px
+        &__inputs
+            display: flex
+            flex-direction: column
+            margin-bottom: 12px
+            input
+                width: 100%
+                margin-right: 0
+                font-size: 14px
+                &:not(:last-child)
+                    margin-bottom: 12px
+        &__textarea
+            textarea
+                width: 100%
+                font-size: 14px
+        &__btn
+            width: 100%
+            justify-content: center
+    .footer
+        &__block
+            display: flex
+            flex-direction: column
+        &__item
+            margin: 0 auto
+            &--left
+                margin-left: 0
+                text-align: left
+            &:not(:last-child)
+                margin-bottom: 25px
+            svg
+                width: 140px 
+                height: auto
+        &__smallText
+            width: 171px
+            margin: 0 auto
+        &__rights
+            display: none
+            &--hide
+                display: block
+                width: 100%
+                text-align: center
+                margin-top: 12px
+        &__nav
+            display: flex
+            flex-direction: column
+            a
+                &:not(:last-child)
+                    margin-bottom: 8px
+        &__social
+            align-items: center
+            a
+                display: block
+                svg
+                    width: 24px
+        &__btn
+            margin-bottom: 40px
+        &__design
+            a
+                color: $Buttercup

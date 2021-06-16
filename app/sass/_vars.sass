@@ -3,3 +3,173 @@ $Mikado: #332212;
 $Buttercup: #F5B316;
 $Boulder: #7A7A7A;
 $White: #ffffff;
+
+.visible 
+    position: relative
+    opacity: 1
+    width: 100% 
+    height: auto
+    float: left
+    transition: opacity .35s ease
+    z-index: 3
+
+.hidden 
+    position: absolute
+    opacity: 0
+    z-index: -1
+    transition: opacity 0s ease
+    img 
+        display: none
+  
+
+[class*="tabbed-section-"] 
+    float: left
+    color: #000
+    p
+        width: 615px
+        margin-top: 16px
+        font-family: "PoppinsRegular"
+  
+
+
+
+.tabbed-section__selector 
+    position: relative
+    height: auto
+    top: 0
+    left: 0
+    padding: 0
+    margin: 0
+    width: max-content
+    float: left
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0
+        background: #f2f2f2
+        height: 3px 
+        width: 100%
+        z-index: 1
+        left: 0
+    [class*="-tab-"] 
+        float: left
+        display: block
+        height: auto
+        width: auto
+        text-align: center
+        background: #fff
+        font-weight: bold
+        text-decoration: none
+        color: black
+        color: $Boulder
+        font-size: 20px
+        &.active 
+            color: $GodGray
+            &::after
+                background:
+                opacity: 1
+    a
+        font-family: "JostRegular"
+        display: block
+        position: relative
+        padding-bottom: 3px
+        cursor: pointer
+        &:not(:last-child)
+            margin-right: 20px
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            bottom: 0
+            background:  $Buttercup
+            height: 4px 
+            width: 100%
+            z-index: 2
+            opacity: 0
+            left: 0
+    a:first-child 
+        border-top-left-radius: 2px
+
+    a:last-of-type 
+        border-top-right-radius: 2px
+
+
+
+
+// .tabbed-section__selector-tab-3.active ~ .tabbed-section__highlighter 
+//     transform: translateX(200px)
+
+// .tabbed-section__selector-tab-2.active ~ .tabbed-section__highlighter 
+//     transform: translateX(100px)
+
+// .tabbed-section__selector-tab-1.active ~ .tabbed-section__highlighter 
+//     transform: translateX(0)
+[class*="portfolio__selector-"] 
+    float: left
+    color: #000
+    p
+        width: 615px
+        margin-top: 16px
+        font-family: "PoppinsRegular"
+
+.portfolio__selector
+    position: relative
+    height: auto
+    top: 0
+    left: 0
+    padding: 0
+    margin: 0
+    width: max-content
+    float: left
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        background: #f2f2f2
+        height: 100% 
+        width: 3px
+        z-index: 1
+        left: 0
+    [class*="-tab-"] 
+        float: left
+        display: block
+        height: auto
+        width: auto
+        padding-left: 20px
+        background: #fff
+        font-weight: bold
+        text-decoration: none
+        color: black
+        color: $Boulder
+        font-size: 20px
+        &.active 
+            color: $GodGray
+            &::after
+                background:
+                opacity: 1
+    a
+        font-family: "JostRegular"
+        display: block
+        position: relative
+        padding-bottom: 3px
+        cursor: pointer
+        &:not(:last-child)
+            margin-right: 20px
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            bottom: 0
+            background:  $Buttercup
+            height: 100%
+            width: 4px
+            z-index: 2
+            opacity: 0
+            left: 0
+    a:first-child 
+        border-top-left-radius: 2px
+
+    a:last-of-type 
+        border-top-right-radius: 2px

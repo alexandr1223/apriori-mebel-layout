@@ -24,30 +24,36 @@ h1
 	text-transform: uppercase
 	font-family: "JostBold"
 	text-align: center
+	line-height: 54px
 
 h2
 	font-size: 36px
 	font-family: "JostBold"
 	text-align: center
+	line-height: 47px
 
 h3
 	font-size: 32px
 	font-family: "JostSemiBold"
 	text-align: center
+	line-height: 41px
 
 h4
 	font-size: 28px
 	font-family: "JostSemiBold"
 	text-align: center
+	line-height: 36px
 
 h5
 	font-size: 24px
 	font-family: "JostSemiBold"
 	text-align: center
+	line-height: 31px
 
 p
 	font-size: 17px
 	font-family: "PoppinsRegular"
+	line-height: 24px
 
 .titleUnderline
 	position: relative
@@ -69,6 +75,10 @@ p
 	border-radius: 4px
 	width: max-content
 	color: $White
+	transition: .4s
+	border: 1px solid transparent
+	box-shadow: 0px 4px 10px rgba(1, 21, 52, 0)
+	cursor: pointer
 	&:hover
 		border: 1px solid $Buttercup
 		box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16)
@@ -85,9 +95,14 @@ p
 	width: max-content
 	color: $White
 	color: $Mikado
+	transition: .4s
+	cursor: pointer
+	display: block
+	box-shadow: 0px 4px 10px rgba(1, 21, 52, 0)
 	&:hover
 		background: $Mikado
 		box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16)
+		color: #fff
 	&:active
 		border: 1px solid rgba(55, 45, 43, 0.7)
 
@@ -100,12 +115,46 @@ p
 	width: max-content
 	color: $White
 	display: flex
+	transition: .4s
+	cursor: pointer
+	border: 1px solid transparent
+	box-shadow: 0px 4px 10px rgba(1, 21, 52, 0)
+	svg
+		margin-left: 8px
 	&:hover
 		border: 1px solid $Buttercup
 		box-shadow: 0px 4px 10px rgba(1, 21, 52, 0.16)
 	&:active
 		background: #F0AC09
 
+.breadCrumbs
+	padding: 127px
+	margin-top: 144px
+	height: 280px
+	width: 100%
+	position: relative
+	img
+		width: 100%
+		position: absolute
+		left: 0 
+		top: 0
+		object-fit: cover
+		z-index: -1
+		height: 280px
+	&__link	
+		display: flex
+		margin: 0 auto
+		align-items: center
+		width: max-content
+		a
+			display: block
+			font-size: 20px
+			font-family: "JostSemiBold"
+			text-transform: uppercase
+		svg
+			margin: 0 16px
+	&__hide
+		display: none !important
 
-
+.break-line
 

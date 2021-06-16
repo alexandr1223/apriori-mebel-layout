@@ -14,6 +14,9 @@
 	<header class="header">
 		<div class="container">
 			<div class="header__nav">
+				<div class="header__menu">
+					<img src="img/svg/menu.svg" alt="" class="img-svg">
+				</div>
 				<div class="header__phone">
 					<img src="img/svg/phone-icon.svg" alt="" class="img-svg">
 					<a class="header__num" href="tel:0675471245">067-547-12-45</a>
@@ -32,7 +35,38 @@
 					<img src="img/svg/triangle.svg" alt="" class="img-svg">
 				</a>
 			</div>
-			<ul class="header__list">
+			<div class="header__mobile">
+				<div class="header__close">
+					<img src="img/svg/close.svg" alt="" class="img-svg">
+				</div>
+				<a href="#" class="header__lang">
+					<span>РУС</span>
+					<img src="img/svg/triangle.svg" alt="" class="img-svg">
+				</a>
+				<ul class="header__list">
+					<li>
+						<a href="#">Кухни</a>
+					</li>
+					<li>
+						<a href="#">Услуги</a>
+					</li>
+					<li>
+						<a href="#">О нас</a>
+					</li>
+					<li>
+						<a href="#">Наши работы</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+				<div class="header__social">
+					<span>Мы в соц сетях</span>
+					<a href="#"><img src="img/svg/instagram-icon.svg" alt="" class="img-svg"></a>
+					<a href="#"><img src="img/svg/facebook-icon.svg" alt="" class="img-svg"></a>
+				</div>
+			</div>
+			<ul class="header__list header__pc">
 				<li>
 					<a href="#">Кухни</a>
 				</li>
@@ -63,9 +97,9 @@
 						<div class="first__subtitle">
 							Мебель, как отражение твоей индивидуальности… 
 						</div>
-						<div class="btnPrimary first__btn">
+						<a href="#" class="btnPrimary first__btn">
 							Бесплатная консультация
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -73,46 +107,96 @@
 			<div class="idea">
 				<div class="container">
 					<h2 class="idea__title">
-
+						Даем жизнь всем Вашим идеям в мебели
 					</h2>
-					<div class="idea__left">
-						<div class="tab-wrapper">
-							<div class="tabbed-section__selector">
-								<a class="tabbed-section__selector-tab-1 active" href="#">Tab 1</a>
-								<a class="tabbed-section__selector-tab-2" href="#">Tab 2</a>
-								<a class="tabbed-section__selector-tab-3" href="#">Tab 3</a>
-							
-								<span class="tabbed-section__highlighter"></span>
+					<div class="idea__block">
+						<div class="idea__left">
+							<div class="tab-wrapper">
+								<div class="tabbed-section__selector">
+									<a class="tabbed-section__selector-tab-1 active">О нас</a>
+									<a class="tabbed-section__selector-tab-2">Почему мы?</a>
+									<a class="tabbed-section__selector-tab-3">Наша миссия</a>
+								</div>
+	
+								<div class="tabbed-section-1 visible">
+									<p>Когда мы предлагаем вам качественную мебель, то подразумеваем удобные, красивые и экологически безопасные предметы интерьера, которые действительно наполнят помещение уютом и особым шиком. Индивидуальный подход к производству -  гарантия того, что каждый наш продукт становится неотъемлемой частью интерьера. Хотим рассказать вам об этом. Давайте познакомимся ближе!</p>
+								</div>
+								<div class="tabbed-section-2 hidden">
+									<p>Мебель – недешевая покупка. Чтобы получить желаемое и сэкономить, обращайтесь в «Apriori mebel». Изготовим мебель по авторским эскизам, нужным размерам и в выбранном варианте отделки. Мы используем в работе технологии долговечного использования, поэтому наша мебель прослужит долго. А за счет украинского производства нам удается удерживать цены на конкурентном уровне. Мы предлагаем не просто столы и стулья, а опыт и талант, который мастера реализуют в предметах интерьера.</p>
+								</div>
+								<div class="tabbed-section-3 hidden">
+									<p>Ежедневно мы доказываем, что мебель Made in Ukraine может быть качественной, недорогой, красивой и долговечной. Сначала мы просто делали классную мебель. Постепенно пришло понимание, что можно не просто предлагать покупателям столы и шкафы, а на примере своего товара менять  отношение украинцев к интерьеру. Ваш дом может быть комфортным и красивым! Мы напрямую взаимодействуем с покупателями, минуя посредников, поэтому точно знаем, что хочет каждый наш клиент!</p>
+								</div>
 							</div>
+							<div class="idea__buttons">
+								<a href="#" class="idea__consult btnPrimary">
+									Бесплатная консультация
+								</a>
+								<a href="#" class="idea__more btnGhost">
+									Узнать больше о нас
+								</a>
+							</div>
+						</div>
+						<div class="idea__right">
+							<img src="img/idea-img.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
 
-							<div class="tabbed-section-1 visible">
-								<h3>Hello World</h2>
-								<span class="divider"></span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel modi facere eius, sapiente aut rerum quae consequatur temporibus nam iste voluptates velit placeat sunt natus quia cupiditate assumenda eum ratione.</p>
-							  </div>
-							  <div class="tabbed-section-2 hidden">
-								<h3>What is it ?</h3>
-								<span class="divider"></span>
-								<p>This is a small pen to show how to create a tabbed content & navigation, using vanilla Javascript</p>
-								<p>The style is following some Material design specifications</p>
-								<p>Feel free to fork, use, or share if you ever find it useful</p>
-							  </div>
-							  <div class="tabbed-section-3 hidden">
-								<img src="http://thecatapi.com/api/images/get?format=src&type=gif" alt="http://thecatapi.com/api/images/get?format=src&type=gif" />
-							  </div>
-						</div>
-						<div class="idea__buttons">
-							<div class="idea__consult btnPrimary">
-								Бесплатная консультация
-							</div>
-							<div class="idea__more btnGhost">
-								Узнать больше о нас
-							</div>
-						</div>
+			<div class="services">
+				<div class="container">
+					<h2 class="services__title titleUnderline">
+						Наши услуги
+					</h2>
+				</div>
+				<div class="services__block">
+					<div class="services__slider">
+						<a href="#" class="services__item">
+							<h4 class="services__itemTitle">
+								Кухни
+							</h4>
+							<img src="img/slider1.jpg" alt="" class="services__img">
+							<div class="services__hover"></div>
+						</a>
+						<a href="#" class="services__item">
+							<h4 class="services__itemTitle">
+								Шкафы-купе
+							</h4>
+							<img src="img/slider2.jpg" alt="" class="services__img">
+							<div class="services__hover"></div>
+						</a>
+						<a href="#" class="services__item">
+							<h4 class="services__itemTitle">
+								Мебель из дерева
+							</h4>
+							<img src="img/slider3.jpg" alt="" class="services__img">
+							<div class="services__hover"></div>
+						</a>
+						<a href="#" class="services__item">
+							<h4 class="services__itemTitle">
+								Кухни
+							</h4>
+							<img src="img/slider1.jpg" alt="" class="services__img">
+							<div class="services__hover"></div>
+						</a>
+						<a href="#" class="services__item">
+							<h4 class="services__itemTitle">
+								Шкафы-купе
+							</h4>
+							<img src="img/slider2.jpg" alt="" class="services__img">
+							<div class="services__hover"></div>
+						</a>
+						<a href="#" class="services__item">
+							<h4 class="services__itemTitle">
+								Мебель из дерева
+							</h4>
+							<img src="img/slider3.jpg" alt="" class="services__img">
+							<div class="services__hover"></div>
+						</a>
 					</div>
-					<div class="idea__right">
-						<img src="img/idea-img.jpg" alt="">
-					</div>
+					<div class="services__leftHide"></div>
+					<div class="services__rightHide"></div>
 				</div>
 			</div>
 
@@ -142,7 +226,7 @@
 								выполненых проектов
 							</p>
 						</div>
-						<div class="companyNums__item">
+						<div class="companyNums__item companyNums__third">
 							<img src="img/svg/companyNums3.svg" alt="" class="img-svg">
 							<div class="companyNums__line"></div>
 							<h4 class="companyNums__number">
@@ -158,7 +242,7 @@
 
 			<div class="our-projects">
 				<div class="container">
-					<h2 class="our-projects__title">
+					<h2 class="our-projects__title titleUnderline">
 						Наши проекты
 					</h2>
 					<div class="our-projects__block">
@@ -189,7 +273,7 @@
 						<a href="#" class="our-projects__item">
 							<img src="img/project6.jpg" alt="">
 						</a>
-						<a href="# class="our-projects__item"">
+						<a href="#" class="our-projects__item"">
 							<img src="img/project7.jpg" alt="">
 						</a>
 						<a href="#" class="our-projects__item">
@@ -247,7 +331,7 @@
 					<div class="question__block">
 						<div class="question__left">
 							<p class="question__text">
-								Ответы на часто задаваемые вопросы Вы можете найти на страничке F.A.Q или напишите Ваш вопрос ниже.
+								Ответы на часто задаваемые вопросы Вы можете найти на страничке <a href="#">F.A.Q</a> или напишите Ваш вопрос ниже.
 							</p>
 							<form class="question__form">
 								<div class="question__inputs">
@@ -257,9 +341,9 @@
 								<div class="question__textarea">
 									<textarea name="textarea" id="" placeholder="Напишите Ваш вопрос"></textarea>
 								</div>
-								<div class="question__btn btnSecondary">
+								<a href="#" class="question__btn btnSecondary">
 									Отправить <img src="img/svg/arrowRight.svg" alt="">
-								</div>
+								</a>
 							</form>
 						</div>
 						<div class="question__right">
@@ -303,7 +387,7 @@
 							Apriori-mebel. Все права защищены. 2021
 						</p>
 					</div>
-					<div class="footer__item">
+					<div class="footer__item footer__item--left">
 						<div class="footer__navTitle">Навигация</div>
 						<div class="footer__nav">
 							<a href="#" class="footer__navItem">
@@ -332,11 +416,14 @@
 							<a href="#"><img src="img/svg/instagram-icon.svg" alt="" class="img-svg"></a>
 							<a href="#"><img src="img/svg/facebook-icon.svg" alt="" class="img-svg"></a>
 						</div>
-						<div class="footer__btn btnPrimary">
+						<a href="#" class="footer__btn btnPrimary">
 							Бесплатная консультация
-						</div>
+						</a>
 						<p class="footer__smallText footer__design">
-							Дизайн сайта - <span>Conversor</span>
+							Дизайн сайта - <a href="https://conversor.com.ua/">Conversor</>
+						</p>
+						<p class="footer__smallText footer__rights footer__rights--hide">
+							Apriori-mebel. Все права защищены. 2021
 						</p>
 					</div>
 				</div>

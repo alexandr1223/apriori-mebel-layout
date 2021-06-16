@@ -2,6 +2,12 @@
     background: url('../img/header-bg.jpg') center center/cover no-repeat
     position: fixed
     width: 100%
+    z-index: 10
+    transition: .4s
+    &__menu
+        display: none
+    &__mobile
+        display: none
     &__nav
         display: flex
         justify-content: space-between
@@ -30,7 +36,7 @@
             height: 40px
             width: 294px
             background: transparent
-            border: 1px solid rgba(255, 255, 255, 0.5)
+            border: 1px solid rgba(255, 255, 255, 0.15)
             color: $White
             font-size: 17px
             font-family: "PoppinsRegular"
@@ -56,19 +62,31 @@
         margin: 0 auto
         margin-top: 30px
         width: max-content
+        
+        margin-bottom: 22px
         li
             a
                 font-family: "JostRegular"
                 font-size: 24px
                 color: $White
                 display: block
-                margin-bottom: 22px
+                position: relative
             &:not(:last-child)
                 margin-right: 28px
+    &__active
+        &::after
+            content: ''
+            position: absolute
+            bottom: -22px
+            left: 0
+            width: 100%
+            padding-bottom: 10px
+            border-bottom: 5px solid $Buttercup
 
 .first
     background: url('../img/first-bg.jpg') center center/cover no-repeat
     height: 700px
+    margin-bottom: 120px
     &__block
         display: flex
         flex-direction: column
@@ -87,7 +105,127 @@
         color: $White
     &__btn
         margin: 0 auto
-    
+
+.idea
+    padding-bottom: 120px
+    .tab-wrapper
+        width: 500px
+    &__buttons
+        display: flex
+        margin-top: 32px
+        .btnPrimary
+            margin-right: 16px
+    &__title
+        margin-bottom: 40px
+        text-align: left
+        max-width: 460px
+    &__block
+        display: flex
+        position: relative
+    &__left
+        display: flex
+        flex-direction: column
+    &__right
+        position: absolute
+        right: -190px
+        top: -40px
+        img
+            width: 610px
+            height: 367px
+            margin-left: 20px
+
+.services
+    padding-bottom: 120px
+    &__title
+        margin-bottom: 80px
+    &__item
+        margin: 30px 20px
+        position: relative
+        transition: .4s
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__hover
+        position: absolute
+        height: 100%
+        bottom: 0
+        width: 100%
+        z-index: 2
+        background: linear-gradient(0deg, rgba(55, 45, 43, 0.89) 0%, rgba(55, 45, 43, 0) 50%)
+    &__itemTitle
+        position: absolute
+        left: 24px
+        bottom: 28px
+        z-index: 3
+    &__block
+        position: relative
+    &__leftHide
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 2
+        height: 100%
+        width: 340px
+        transform: rotate(180deg)
+        background: linear-gradient(267.44deg, #FFFFFF 2.31%, rgba(255, 255, 255, 0) 90.13%)
+    &__rightHide
+        position: absolute
+        right: 0
+        top: 0
+        z-index: 2
+        height: 100%
+        width: 340px
+        background: linear-gradient(267.44deg, #FFFFFF 2.31%, rgba(255, 255, 255, 0) 90.13%)
+    &__slider
+        z-index: 1
+    .slick-current
+        box-shadow: 0px 0px 30px rgba(55, 45, 43, 0.35)
+    .slick-dots 
+        margin: 0 auto
+        display: flex
+        width: max-content
+        margin-top: -14px
+        li 
+            width: 11px
+            height: 11px
+            margin: 0 10px
+            button
+                font-size: 0
+                background: transparent
+                border: none
+                width: 27px
+                height: 27px
+                position: relative
+                padding: 0
+                cursor: pointer
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-45%, -45%)
+                    width: 11px 
+                    height: 11px
+                    border-radius: 100%
+                    background: $Boulder
+            
+            &.slick-active
+                button
+                    font-size: 0
+                    background: transparent
+                    border: none
+                    width: 27px
+                    height: 27px
+                    border-radius: 100%
+                    border: 1px solid $Buttercup
+                    &::before
+                        background: $Buttercup
+                   
+                
+        
+
 .companyNums
     background: url('../img/companyNums-bg.jpg') center center/cover no-repeat
     padding: 60px 0
@@ -115,10 +253,13 @@
         color: #fff
         
 .our-projects
-    padding: 120px 0 60px 0
+    padding: 120px 0 120px 0
     &__title
         margin-bottom: 80px
     &__item
+        width: 350px
+        img
+            object-fit: cover
     &__block
         display: grid
         grid-template-columns: 350px 350px 350px
@@ -135,6 +276,9 @@
         text-align: center
         margin-bottom: 32px
         color: $Mikado
+    &__more
+        margin: 0 auto
+        margin-top: 50px
 
 .how-work
     padding-bottom: 120px
@@ -159,6 +303,7 @@
         text-align: left
     &__smallText
         font-size: 14px
+        line-height: 21px
 
 .question
     padding-bottom: 120px
@@ -166,7 +311,13 @@
         max-width: 500px
         margin-top: 12px
         margin-bottom: 50px
+        line-height: 21px
         color: $GodGray
+        a
+            color: $Buttercup
+            font-weight: 700
+            padding-bottom: 0px
+            border-bottom: 1px solid $Buttercup
     &__block
         display: flex
     &__left
@@ -182,9 +333,15 @@
             height: 280px
             width: 1px
             top: 26px
+        &--noborder
+            &::after
+                display: none
+                padding-right: 100px
     &__right
         width: 100%
         margin-left: 86px
+        &--left
+            margin-left: 0
     &__inputs
         margin-bottom: 24px
         display: flex
@@ -193,6 +350,7 @@
             border: 1px solid $Boulder
             padding: 14px 16px
             border-radius: 6px
+            font-family: "PoppinsRegular"
             &:not(:last-child)
                 margin-right: 20px
     &__textarea
@@ -204,6 +362,15 @@
             border-radius: 6px
             height: 125px
             resize: none
+            font-family: "PoppinsRegular"
+    &__info
+        margin-top: 95px
+        padding: 30px
+        font-size: 17px 
+        font-family: "PoppinsRegular"
+        line-height: 24px
+        background: #fff
+        box-shadow: 0px 0px 40px rgba(55, 45, 43, 0.15)
     &__item
         display: flex
         flex-direction: column
@@ -240,8 +407,11 @@
         font-size: 12px
         color: #fff
         font-family: "PoppinsRegular"
+        line-height: 18px
     &__rights
         margin-top: 20px
+        &--hide
+            display: none
     &__item
         display: flex
         flex-direction: column
@@ -250,6 +420,7 @@
         font-family: "JostSemiBold"
         margin-bottom: 16px
         color: #fff
+        line-height: 31px
     &__nav
         display: grid
         grid-template-columns: 1fr 1fr 1fr
@@ -269,9 +440,9 @@
         a
             margin-left: 24px
     &__btn
-        margin-bottom: 38px
+        margin-bottom: 30px
     &__design
         text-align: right
-        span
+        a
             color: $Buttercup
             font-family: "PoppinsRegular"

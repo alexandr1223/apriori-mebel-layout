@@ -1,0 +1,180 @@
+.advantages
+    padding-top: 120px
+    &__title
+        margin-bottom: 54px
+    &__text
+        margin-bottom: 16px
+        &:last-child
+            margin-bottom: 12px
+    &__more
+        padding: 17px 28px
+        background: $Mikado
+        margin-top: 30px
+        color: #fff
+        width: 805px
+        font-size: 17px
+        font-family: "PoppinsRegular"
+        line-height: 24px
+        &--wood
+            width: 930px
+    &__list
+        display: flex
+    &__left
+        margin-right: 16px
+    &__left,
+    &__right
+        li
+            display: flex
+            align-items: center
+            font-size: 16px 
+            font-family: "PoppinsRegular"
+            white-space: nowrap
+            margin: 12px 0
+            svg
+                margin-right: 12px
+            
+.slider
+    padding-bottom: 120px
+    &__title
+        margin-bottom: 20px
+    &__subtitle
+        width: 630px
+    &__item
+        margin: 30px 20px
+        position: relative
+        transition: .4s
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__hover
+        position: absolute
+        height: 100%
+        bottom: 0
+        width: 100%
+        z-index: 2
+        background: linear-gradient(0deg, rgba(55, 45, 43, 0.89) 0%, rgba(55, 45, 43, 0) 50%)
+    &__itemTitle
+        position: absolute
+        left: 24px
+        bottom: 28px
+        z-index: 3
+    &__block
+        position: relative
+        margin-top: 80px
+    &__leftHide
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 2
+        height: 100%
+        width: 340px
+        transform: rotate(180deg)
+        background: linear-gradient(267.44deg, #FFFFFF 2.31%, rgba(255, 255, 255, 0) 90.13%)
+    &__rightHide
+        position: absolute
+        right: 0
+        top: 0
+        z-index: 2
+        height: 100%
+        width: 340px
+        background: linear-gradient(267.44deg, #FFFFFF 2.31%, rgba(255, 255, 255, 0) 90.13%)
+    &__slider
+        z-index: 1
+    .slick-current
+        box-shadow: 0px 0px 30px rgba(55, 45, 43, 0.35)
+    .slick-dots 
+        margin: 0 auto
+        display: flex
+        width: max-content
+        margin-top: -14px
+        li 
+            width: 11px
+            height: 11px
+            margin: 0 10px
+            button
+                font-size: 0
+                background: transparent
+                border: none
+                width: 27px
+                height: 27px
+                position: relative
+                padding: 0
+                cursor: pointer
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-45%, -45%)
+                    width: 11px 
+                    height: 11px
+                    border-radius: 100%
+                    background: $Boulder
+            
+            &.slick-active
+                button
+                    font-size: 0
+                    background: transparent
+                    border: none
+                    width: 27px
+                    height: 27px
+                    border-radius: 100%
+                    border: 1px solid $Buttercup
+                    &::before
+                        background: $Buttercup
+
+.catalog
+    padding-top: 120px
+    padding-bottom: 120px
+    &__title
+        margin-bottom: 54px
+    &__list
+        display: grid
+        grid-template-columns: 1fr 
+        grid-gap: 80px 0
+    &__block
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 0 30px
+    &__itemTitle
+        text-align: left
+        margin-bottom: 20px
+    &__text
+        margin-bottom: 32px
+        &--first
+            max-width: 380px
+    &__btn
+
+.portfolio
+    padding: 70px 0 120px 0
+    &__info
+        display: flex
+        flex-direction: column
+        margin-bottom: 95px
+    &__text
+        margin-bottom: 10px
+        a
+            color: $Buttercup
+            font-weight: 700
+    &__wrapper
+        display: flex
+    &__selector
+        display: flex
+        flex-direction: column
+        width: 300px
+        margin-right: 50px
+        height: max-content
+        a
+            font-size: 28px
+            text-align: left
+            &:not(:last-child)
+                margin-bottom: 16px
+    &__section
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 30px 40px
+        img
+            display: block
+            margin: 0 20px
