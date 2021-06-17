@@ -342,6 +342,14 @@
                 object-fit: cover
         &__center
             display: none !important
+        &__more
+            border: none
+            text-decoration: underline !important
+            background: none
+            font-family: "JostSemiBold"
+            font-size: 28px
+            line-height: 36px
+            margin-top: 20px
     .how-work
         padding-bottom: 75px
         &__itemTitle
@@ -364,10 +372,15 @@
             padding-right: 0
             &::after
                 display: none
+        &__file
+            left: 0
         &__text
             font-size: 16px
             width: 100%
             margin-bottom: 30px
+        &__form
+            max-width: 450px
+            margin: 0 auto
         &__inputs
             display: flex
             flex-direction: column
@@ -426,3 +439,10 @@
         &__design
             a
                 color: $Buttercup
+
+@media (min-width: 480px) and (max-width: 767px)
+    .footer
+        &__item
+            &--left
+                text-align: center
+                margin: 0 auto

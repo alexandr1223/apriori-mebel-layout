@@ -18,6 +18,7 @@
                 height: 4px
             a
                 white-space: nowrap
+                font-size: 18px !important
                 &:not(:last-child)
                     margin-bottom: 0
                     margin-left: 0
@@ -31,15 +32,69 @@
                 padding-left: 0
         &__images
             margin-top: 30px
+    .advantages
+        padding-top: 54px
+        &__title
+            margin-bottom: 28px
+        &__text
+            font-size: 14px
+            line-height: 21px
+            margin-bottom: 16px
+        &__list
+            flex-direction: column
+        &__left,
+        &__right
+            margin-right: 0
+            width: 100%
+            li
+                white-space: normal
+                font-size: 14px
+                line-height: 21px
+                margin: 0
+                &:not(:last-child)
+                    margin-bottom: 8px
+                svg
+                    min-width: 16px
+                    max-width: 16px
+                    margin-right: 8
+        &__left
+            margin-bottom: 8px
+        &__more
+            width: 100%
+    .break-line
+        display: none
+
+
 @media (max-width: 767px)
     .portfolio
         padding-top: 54px
         width: 100%
         &__selector
             overflow: scroll
+            display: none
+        &__select
+            display: block
+            font-size: 20px
+            padding: 12px 16px
+            font-family: "JostMedium"
+            border: 1px solid $Boulder
+            max-width: 450px
+            margin: 0 auto
         &__text
             font-size: 17px
             line-height: 24px
+        &__images
+            margin-top: 37px
+            width: 100%
+            margin: 0 auto
+            margin-top: 37px
+        &__items
+            grid-template-columns: 1fr
+            grid-gap: 20px 0
+            width: 100%
+            margin: 0 auto
+            img
+                margin: 0
     
     .catalog
         padding-top: 54px
@@ -70,6 +125,7 @@
         &__text
             font-size: 14px
             line-height: 21px
+            margin-bottom: 16px
         &__list
             flex-direction: column
         &__left
@@ -104,6 +160,33 @@
             padding: 12px 17px
         
     .slider
+        padding-bottom: 75px
         &__leftHide,
         &__rightHide
             display: none
+        &__item
+            width: 290px
+            margin: 20px 10px
+        &__subtitle
+            width: 100%
+            font-size: 17px
+            line-height: 24px
+        &__block
+            margin-top: 28px
+        .slick-dots
+            li
+                button
+                    &::before
+                        transform: translate(-50%, -50%)
+    
+    .our-projects__rooms
+        display: grid
+        grid-template-columns: 1fr
+        grid-gap: 20px
+        .our-projects__item
+            width: 90%
+            margin: 20px auto
+            max-width: 380px
+            margin: 20px auto
+            img
+                width: 100%
