@@ -92,22 +92,44 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     function viewMoreImages() {
-      if (document.querySelector('.our-projects__rooms')) {
+      if (document.querySelector('.our-projects__rooms') && window.innerWidth > 767) {
         document.querySelectorAll('.our-projects__rooms .our-projects__item').forEach(function(item, i) {
-          if (i >= 5) {
+          if (i >= 9) {
             item.classList.add('our-projects__hide')
-          }
+          } else {
+			document.querySelector('.our-projects__more').style.display = 'none';
+		  }
           document.querySelector('.our-projects__more').addEventListener('click', () => {
             item.classList.remove('our-projects__hide');
             document.querySelector('.our-projects__more').style.display = 'none';
           })
         })
-      }
+      } else if (document.querySelector('.our-projects__rooms') && window.innerWidth < 767) {
+		document.querySelectorAll('.our-projects__rooms .our-projects__item').forEach(function(item, i) {
+			if (i >= 4) {
+			  item.classList.add('our-projects__hide')
+			} else {
+			  document.querySelector('.our-projects__more').style.display = 'none';
+			}
+			document.querySelector('.our-projects__more').addEventListener('click', () => {
+			  item.classList.remove('our-projects__hide');
+			  document.querySelector('.our-projects__more').style.display = 'none';
+			})
+		  })
+	  }
     }
     viewMoreImages();
 
     function viewMorePortfolio() {
 		if (document.querySelector('.portfolio__select')) {
+			let visible = document.querySelector('.visible')
+			document.querySelectorAll('.visible img').forEach( (img, i) => {
+				if (i <= 5) {
+					visible.querySelector('.portfolio__more').style.display = 'none';
+				} else {
+					visible.querySelector('.portfolio__more').style.display = 'block';
+				}
+			})
 			const select = document.querySelector('.portfolio__select');
 			select.onchange = () => {
 				document.querySelector('.visible').classList.add('hidden')
@@ -317,16 +339,44 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     tabsPortfolio();
 
-	document.querySelector('.question__form button').addEventListener('click', (e) => {
-		e.preventDefault();
-		$.ajax({
-			type: "POST",
-			url: "send.php",
-			data: $(".question__form").serialize(),
-			success: function(data) {
-				document.querySelector('.question__success').style.cssText = 'opacity: 1; margin-bottom: 24px';
-			}
-		});
-	})
+	function sendForm() {
+		if (document.querySelector('.question__form')) {
+			document.querySelector('.question__form button').addEventListener('click', (e) => {
+				e.preventDefault();
+				$.ajax({
+					type: "POST",
+					url: "send.php",
+					data: $(".question__form").serialize(),
+					success: function(data) {
+						document.querySelector('.question__success').style.cssText = 'opacity: 1; margin-bottom: 24px; display: block';
+					}
+				});
+			});
+		}
+	}
+	sendForm();
+
+	function sendFormCalculation() {
+		if (document.querySelector('.calculation__form')) {
+			document.querySelector('.calculation__form button').addEventListener('click', (e) => {
+				e.preventDefault();
+				$.ajax({
+					type: "POST",
+					url: "send.php",
+					data: $(".calculation__form").serialize(),
+					success: function(data) {
+						document.querySelector('.question__success').style.cssText = 'opacity: 1; margin-bottom: 24px; display: block';
+					}
+				});
+			});
+		}
+	}
+	sendFormCalculation();
+
+	$(document).ready(function () {
+		$('.accordeon__heading').click(function () {
+			$(this).toggleClass('ins').next().slideToggle();
+        });
+    });
 
 });

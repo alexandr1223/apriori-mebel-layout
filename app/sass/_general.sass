@@ -16,7 +16,7 @@
     &__phone
         display: flex
         font-size: 17px
-        font-family: "PoppinsRegular"
+        font-family: "NotoSansRegular"
         align-items: center
         svg
             margin-right: 12px
@@ -26,7 +26,7 @@
         span
             color: $White
             font-size: 17px
-            font-family: "PoppinsRegular"
+            font-family: "NotoSansRegular"
         a
             margin-left: 24px
     &__search
@@ -39,11 +39,11 @@
             border: 1px solid rgba(255, 255, 255, 0.15)
             color: $White
             font-size: 17px
-            font-family: "PoppinsRegular"
+            font-family: "NotoSansRegular"
             &::-webkit-input-placeholder
                 color: $White
                 font-size: 17px
-                font-family: "PoppinsRegular"
+                font-family: "NotoSansRegular"
         svg
             position: absolute
             left: 10px
@@ -124,7 +124,7 @@
     &__title
         color: $White
     &__subtitle
-        font-family: "PoppinsRegular"
+        font-family: "NotoSansRegular"
         font-size: 17px
         text-align: center
         margin-bottom: 34px
@@ -333,7 +333,7 @@
         line-height: 24px
         position: relative
         width: max-content
-        font-family: "PoppinsRegular"
+        font-family: "NotoSansRegular"
         font-weight: 600
         color: $GodGray
         max-width: 90%
@@ -353,7 +353,7 @@
         font-size: 14px
         margin-top: 12px
         margin-bottom: 12px
-        font-family: "PoppinsRegular"
+        font-family: "NotoSansRegular"
         color: $GodGray
     &__block
         display: grid
@@ -413,6 +413,7 @@
         margin-top: 48px
         margin-bottom: 54px
         color: $GodGray
+        font-weight: 400
 
 .question
     padding-bottom: 120px
@@ -420,17 +421,7 @@
         .question__left
             padding-right: 30px
         .question__right
-            margin-left: 25px
-    &__contact
-        display: grid
-        grid-template-columns: 1fr 1fr
-        grid-gap: 54px 24px
-        height: 100%
-        .question__item
-            margin-bottom: 0
-            height: max-content
-        .question__text
-            margin-bottom: 0
+            margin-left: 20px
     &__text
         max-width: 500px
         margin-top: 12px
@@ -446,6 +437,7 @@
         color: #22A103
         font-weight: 600
         opacity: 0
+        text-align: left
     &__wrapper
         width: 100%
         position: relative
@@ -461,7 +453,7 @@
         line-height: 1
         margin-top: 1px
         font-size: 17px
-        font-family: "PoppinsRegular"
+        font-family: "NotoSansRegular"
         color: $Mikado
         font-weight: 400
     &__file-button 
@@ -505,7 +497,7 @@
             border: 1px solid $Boulder
             padding: 14px 16px
             border-radius: 6px
-            font-family: "PoppinsRegular"
+            font-family: "NotoSansRegular"
             &:not(:last-child)
                 margin-right: 20px
     &__textarea
@@ -517,12 +509,12 @@
             border-radius: 6px
             height: 125px
             resize: none
-            font-family: "PoppinsRegular"
+            font-family: "NotoSansRegular"
     &__info
         margin-top: 95px
         padding: 30px
         font-size: 17px 
-        font-family: "PoppinsRegular"
+        font-family: "NotoSansRegular"
         line-height: 24px
         background: #fff
         box-shadow: 0px 0px 40px rgba(55, 45, 43, 0.15)
@@ -533,7 +525,7 @@
         a
             margin-bottom: 8px
             font-size: 17px
-            font-family: "PoppinsRegular"
+            font-family: "NotoSansRegular"
             color: $GodGray
             margin-left: 36px
     &__socTitle
@@ -545,6 +537,28 @@
             font-size: 20px
             font-family: "JostMedium"
             margin-left: 12px
+    
+    &__contact
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 54px 14px
+        height: 100%
+        width: max-content
+        max-width: 100%
+        a
+            font-size: 15px
+        .question__item
+            margin-bottom: 0
+            height: max-content
+        .question__text
+            margin-bottom: 0
+    &__socText
+        margin-bottom: 8px
+        font-size: 14px
+        font-family: "NotoSansRegular"
+        color: $GodGray
+        margin-left: 36px
+        letter-spacing: .001em
         
 .footer
     background: url('../img/footer-bg.jpg') center center/cover no-repeat
@@ -561,7 +575,7 @@
     &__smallText
         font-size: 12px
         color: #fff
-        font-family: "PoppinsRegular"
+        font-family: "NotoSansRegular"
         line-height: 18px
     &__rights
         margin-top: 20px
@@ -583,7 +597,7 @@
     &__navItem
         white-space: nowrap
         font-size: 17px
-        font-family: "PoppinsRegular"
+        font-family: "NotoSansRegular"
     &__social
         display: flex
         align-items: center
@@ -591,7 +605,7 @@
         span
             color: $White
             font-size: 17px
-            font-family: "PoppinsRegular"
+            font-family: "NotoSansRegular"
         a
             margin-left: 24px
     &__btn
@@ -600,4 +614,4 @@
         text-align: right
         a
             color: $Buttercup
-            font-family: "PoppinsRegular"
+            font-family: "NotoSansRegular"

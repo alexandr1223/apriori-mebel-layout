@@ -1,0 +1,104 @@
+.faq
+    padding-top: 68px
+    padding-bottom: 120px
+    &__text
+        margin-top: 12px
+
+.accordeon
+    height: 100%
+    margin-top: 80px
+    &__panel
+        position: relative
+        &:last-child
+            .accordeon__collapse
+                border-bottom: 1px solid rgba(122, 122, 122, 0.3)
+    &__heading  span
+        font-family: "NotoSansRegular"
+        font-size: 17px
+        font-weight: 400
+        display: block
+        padding: 24px 20px
+        position: relative
+        border: 1px solid rgba(122, 122, 122, 0.3)
+        color: $GodGray
+        cursor: pointer
+        transition: .4s
+        &:hover
+            background: rgba(245, 179, 22, 0.15)
+            text-shadow: 0 0 .75px #333, 0 0 .75px #333
+    &__collapse
+        display: none
+        font-family: "NotoSansRegular"
+        font-size: 17px
+        font-weight: 400
+        padding: 20px 20px
+        position: relative
+        border-right: 1px solid rgba(122, 122, 122, 0.3)
+        border-left: 1px solid rgba(122, 122, 122, 0.3)
+        color: $GodGray
+        
+    .ins
+        span
+            text-shadow: 0 0 .75px #333, 0 0 .75px #333
+        .accordeon__plus
+            span
+                &:last-child
+                    transform: rotate(90deg)
+                    opacity: 0
+                    top: -11px
+                    right: 50%
+
+    &__plus
+        position: absolute
+        right: 35px
+        top: 35px
+        span
+            display: block
+            width: 24px
+            height: 2px
+            padding: 0
+            background: $Mikado
+            transition: .4s
+            &:last-child
+                width: 2px
+                height: 24px
+                position: absolute
+                right: 40%
+                top: 50%
+                transform: translate(-50%, -50%)
+
+.map
+    padding: 120px 0
+    &__list
+        li
+            display: flex
+            flex-direction: column
+            a
+                position: relative
+                font-family: "JostMedium"
+                font-weight: 500
+                color: $GodGray
+                &::before
+                    content: ''
+                    position: absolute
+                    left: -20px
+                    top: 50%
+                    transform: translateY(-50%)
+                    height: 3px 
+                    width: 12px
+                    background: #F5B316
+                    margin-right: 12px
+    &__main
+        font-size: 20px
+        margin-bottom: 24px
+        margin-left: 20px
+        &--list
+            margin-bottom: 8px
+    &__small
+        margin-bottom: 8px
+        font-size: 17px
+        margin-left: 24px
+        &::before
+            display: none
+        &:last-child
+            margin-bottom: 24px
