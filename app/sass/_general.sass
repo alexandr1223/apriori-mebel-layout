@@ -175,7 +175,7 @@
         cursor: pointer
         &:hover
             .services__link
-                display: block
+                display: flex
             .services__itemTitle
                 bottom: 64px
         img
@@ -225,8 +225,12 @@
         font-family: "JostRegular"
         color: $Buttercup
         display: none
+        align-items: center
         z-index: 4
         text-transform: uppercase
+        img
+            width: 40px
+            margin-left: 10px
     .slick-current
         box-shadow: 0px 0px 30px rgba(55, 45, 43, 0.35)
     .slick-dots 
